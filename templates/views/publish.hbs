@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1″ />
+    <title>Share your ride</title>
+    <link rel="stylesheet" type="text/css" href="css/publish.css">
+</head>
+
+<body>
+    {{!-- {{>navbar}} --}}
+    <header>
+        <nav>
+            <ul>
+                <img src="css/seatz.png" id="logo" alt="logo">
+                <li><a href="/index">Seatz</a></li>
+                <li><a href="#">Publish a ride</a></li>
+                {{!-- <li><a href="/login">Log in</a></li>
+                <li><a href="/signup">Sign up</a></li> --}}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Publish a ride</h1>
+
+        <form action="/publish" method="post" id="publish-form">
+
+            <input type="text" placeholder="Name" id="name" name="name" required>
+            <input type="tel" placeholder="Phone Number" id="contact" name="contact" pattern="[6-9]\d{9}" required>
+            <input type="text" placeholder="From" id="from" name="from" required>
+            <input type="text" id="to" placeholder="To" name="to" required>
+            <input type="text" placeholder="Boarding point(optional)" id="bp" name="bp">
+            <input type="text" id="dp" placeholder="Dropping point(optional)" name="dp">
+            <input type="number" id="seats" placeholder="Number of seats available" name="seats" min="1" max="5" required>
+            <input type="number" placeholder="Price per seat" id="price" name="price" required>
+            <input type="date" id="date" placeholder="Date of journey" name="date" required>
+            <input type="time" id="time" placeholder="Departure time" name="time">
+            <select id="vehicletype" placeholder="Vehicle type" name="vehicletype">
+                <option value="auto">Auto</option>
+                <option value="car">Car</option>
+                <option value="bike">Bike</option>
+            </select>
+            <input type="submit" id="publishbutton" class="btnPublish" value="Publish" />
+        </form>
+
+    </main>
+
+    <footer>
+        &copy; 2023 Seatz. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

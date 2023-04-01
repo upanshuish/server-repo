@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Signup</title>
+  <link rel="stylesheet" type="text/css" href="css/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Create a new account</h2>
+    <form action="/signup" method="post">
+
+      <input type="text" id="firstName" name="firstName" placeholder="First name" required><br><br>
+
+      <input type="text" id="lastName" name="lastName" placeholder="Last name" required><br><br>
+
+      <input type="email" id="email" name="email" placeholder="Email address" required><br><br>
+
+      <input type="password" id="password" name="password" placeholder="Create password" required><br><br>
+
+      <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Phone number" pattern="[6-9]\d{9}" required><br><br>
+
+      <input type="submit" class="btnSignUp" value="Sign Up" />
+      <p>Already have an account?<a href="/">Log in</a></p>
+    </form>
+  </div>
+</body>
+
+</html>

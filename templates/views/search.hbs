@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="css/seatz.png" id="logo" alt="logo">
+                <li><a href="/index">Seatz</a></li>
+                {{!-- <li><a href="#">Publish a ride</a></li> --}}
+                {{!-- <li><a href="/login">Log in</a></li>
+                <li><a href="/signup">Sign up</a></li> --}}
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Available rides</h1>
+        {{#if rides.length}}
+        {{!-- <p>Showing {{rides.length}} results:</p> --}}
+        {{!-- <p>Available rides:</p> --}}
+        {{#each rides}}
+        <div class="card">
+            <li>
+                <p>Name: {{name}}</p>
+                <p>From: {{from}} &nbsp;&nbsp;&nbsp;To: {{to}}</p>
+                <p>Date: {{date}}</p>
+                <p>Time: {{time}}</p>
+                <p>Vehicle: {{vehicletype}}</p>
+                <p>Price: ₹{{price}}</p>
+            </li>
+            <form method="GET" action="/rideDetails">
+                <input type="hidden" name="rideId" value="{{this._id}}">
+                <button type="submit" id="details">Details</button>
+            </form>
+        </div>
+        {{/each}}
+        {{else}}
+        <p id="noride">Sorry, no rides for this journey at this moment.</p>
+        {{/if}}
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Seatz. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

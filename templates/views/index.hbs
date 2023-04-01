@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Seatz - Find a ride</title>
+  {{!--
+  <base href="/"> --}}
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+  {{!-- {{>navbar}} --}}
+  <header>
+    <nav>
+      <ul>
+        <img src="css/seatz.png" id="logo" alt="">
+        <li><a href="/index">Seatz</a></li>
+        <li><a href="/publish">Publish a ride</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Find a ride</h1>
+    <form action="/", method="post">
+      <input type="text" id="from" placeholder="From" name="from" required>
+
+      <input type="text" id="to" name="to" placeholder="To" required>
+
+      <input type="number" id="passengers" name="passengers" placeholder="Number of passengers" min="1" max="10" required>
+
+      
+      <input type="date" id="date" placeholder="Date" name="date" required>
+
+      <button type="submit" href="/search">Search rides</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 Seatz. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
+

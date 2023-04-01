@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ride Details</title>
+    <link rel="stylesheet" type="text/css" href="css/rideDetails.css">
+</head>
+
+<body>
+    <div class="container" id="ct"> 
+    <h1>Ride Details</h1>
+    <p>Name: {{ride.name}}</p>
+    <p>From: {{ride.from}}</p>
+    <p>To: {{ride.to}}</p>
+    <p>Boarding point: {{ride.bp}}</p>
+    <p>Dropping point: {{ride.dp}}</p>
+    <p>Seats: {{ride.seats}}</p>
+    <p>Date: {{dateFormat ride.date}}</p>
+    <p>Time: {{ride.time}}</p>
+    <p>Vehicle: {{ride.vehicletype}}</p>
+    <p>Price: ₹{{ride.price}}</p>
+    <p>Contact: +91 {{ride.contact}} &nbsp;&nbsp;&nbsp;&nbsp;(Please note the phone number and call the driver before you book the ride)</p>
+    <h3>Communication with driver</h3>
+    <p class="desc">"To ensure that your ride goes smoothly, we recommend our users to call their driver before booking to discuss any
+        special requirements or details
+        with their driver before making a booking. This will help
+        to ensure that both parties are on the same page and can make necessary arrangements. After the call, you can
+        proceed with booking the ride with confidence. Thank you for your cooperation and understanding."</p>
+    <form id="bookform" action="/bookings/{{ride._id}}" method="POST">
+        <input type="hidden" name="rideId" value="{{ride._id}}">
+        <button type="submit" id="btnbook">Book ride</button>
+    </form>
+    </div>
+</body>
+
+</html>

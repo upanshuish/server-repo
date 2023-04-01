@@ -1,0 +1,46 @@
+#ct{
+    margin-top:28px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-style: solid;
+    padding:50px;
+    border: 2px solid rgb(225, 223, 223);
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    
+
+}
+
+p{
+    margin:2px;
+    font-size: 17px;
+
+}
+
+
+h3{
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+.desc{
+    color: grey;
+}
+h1{
+    margin-top: -12px;
+    font-size: 24px;
+}
+
+#btnbook{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    line-height: 25px;
+    border-radius: 20px;
+    width:20%
+}
+
+#btnbook:hover{
+    background-color: rgb(67, 65, 65);
+}

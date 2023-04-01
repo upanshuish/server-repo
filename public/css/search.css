@@ -1,0 +1,97 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+}
+footer{
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background-color: black;
+}
+#noride{
+    text-align: center;
+    font-size:26px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+#logo {
+    border-radius: 50px;
+    width: 25px;
+    margin-right: 8px;
+    margin-bottom: -6px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+.card .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.card .details span {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+#details {
+    width: 90px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#btnbook {
+    color: white;
+    background-color: black;
+    border-radius: 6px;
+    margin-top: 9px;
+    padding: 8px;
+    height: 34px;
+    width: -webkit-fill-available;
+}
