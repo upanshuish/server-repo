@@ -57,7 +57,7 @@ input[type="email"] {
 }
 
 button[type="submit"] {
-  background-color: black;
+  background-color: green;
   color: #fff;
   padding: 0.5rem;
   font-size: 1.2rem;
