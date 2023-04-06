@@ -1,28 +1,29 @@
 body {
   background-color: #fff;
+  font-family: Arial, sans-serif;
 }
 
 h2 {
-  font-size: 30px;
-  line-height: 25px;
+  font-size: 50px;
+  line-height: 22px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 form {
-  max-width: 400px;
+  max-width: 650px;
   font-family: Arial, sans-serif;
   margin: 0 auto;
-  align-items: center;
+  text-align: center;
 }
 
 .container {
   border: 2px solid rgb(225, 223, 223);
   padding: 20px;
-  width: 40%;
-  height: 506px;
+  width: 750px;
+  height: 862px;
   background-color: white;
-  margin: 31px auto 0;
+  margin: 160px auto 0;
   border-radius: 20px;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
@@ -35,10 +36,10 @@ input[type="tel"] {
   width: 95%;
   line-height: 1.5;
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  font-size: 2rem;
   margin-top: -10px;
   margin-bottom: -10px;
 }
@@ -47,32 +48,30 @@ input[type="text"] {
   display: inline-block;
   width: 95%;
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
-  margin-top: -10px;
+  font-size: 2rem;
+  margin-top: 0px;
   margin-bottom: -10px;
 }
-
+p{font-size: 23px}
 p a {
   text-decoration: none;
   color: #23629F;
 }
 
 .btnSignUp {
-  margin-top: 7px;
-  width: 100%;
-  display: block;
-  margin: 1rem left;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  background-color:black;
   color: #fff;
-  background-color: black;
+  padding: 1rem;
+  font-size:2.2rem;
   border: none;
+  border-radius: 12px;
   cursor: pointer;
+  width: 100%;
+  margin-top: 7px;
+  display: block;
   transition: all 0.2s ease-in-out;
 }
 

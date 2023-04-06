@@ -15,7 +15,7 @@ const SignedUp = require("./models/usersignup")
 const ResetPassword = require("./models/forgot")
 const { json } = require('express');
 const {sendMail}=require('./nodemailer')
-
+const serverIP = "179.61.188.22"
 const handlebars = require('handlebars');
 const dateFormat = require('handlebars-dateformat');
 
@@ -116,8 +116,6 @@ app.post('/publish', async (req, res) => {
             name: req.body.name,
             from: req.body.from,
             to: req.body.to,
-            bp: req.body.bp,
-            dp: req.body.dp,
             seats: req.body.seats,
             date: req.body.date,
             time: req.body.time,
@@ -226,7 +224,7 @@ app.post('/bookings/:id', async (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
+app.listen(port, "179.61.188.22",() => {
+    console.log(`Server started on port : ${port}`);
 });
 
