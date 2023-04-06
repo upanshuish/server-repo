@@ -6,27 +6,25 @@ module.exports.sendMail = async function sendMail(str, data) {
         port: 587,
         secure: false,
         auth: {
-            user: 'upanshusharma0@gmail.com', 
-            pass: 'ihcbsmmlwqgnqrxc', 
+            user: 'rideseatz@gmail.com', 
+            pass: 'klrdahqlzbcwzrwq', 
         },
     });
 
     var Osubject, Otext, Ohtml;
     if(str==='signup'){
-        Osubject=`Thank you for signing ${data.name}`;
+        Osubject=`Thank you for signing ${data.firstName}`;
         Ohtml=`
         <h1>Welcome to Seatz</h1>
         Hope you have a good time !
         Here are your details-
-        Name: ${data.firstName} ${data.lastName} <br>
-        Password: ${data.password}<br>
         Email: ${data.email}<br>
-        Phone number: ${data.mobileNumber}
+        Password: ${data.password}
         `
     }
 
     let info = await transporter.sendMail({
-        from: '"Seatz ðŸ‘»" <upanshusharma0@gmail.com>',
+        from: '"Seatz ðŸ‘ »<rideseatz@gmail.com>',
         to: data.email, 
         subject: Osubject, 
         // text: "Hello world?", // plain text body

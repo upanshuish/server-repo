@@ -76,8 +76,11 @@ li {
     color: #999;
 }
 
-#details {
-    width: 90px;
+#details 
+{
+padding:5px;
+font-size: 15px;
+    width: 120px;
     margin-top: 20px;
     border-radius: 50px;
     background-color: black;
