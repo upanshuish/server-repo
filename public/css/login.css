@@ -36,7 +36,7 @@ form {
   flex-direction: column;
   max-width: 700px;
   margin: 0 auto;
-  background-color: white;
+  background-color: blue;
 }
 
 
@@ -57,7 +57,7 @@ input[type="email"] {
 }
 
 button[type="submit"] {
-  background-color: black;
+  background-color: green;
   color: #fff;
   padding: 1rem;
   font-size: 2.2rem;
