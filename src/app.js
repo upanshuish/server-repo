@@ -40,8 +40,8 @@ app.set('view engine', 'hbs');
 app.set('views', templates_path);
 hbs.registerPartials(partials_path);
 
-app.get("/", protectRoute, (req, res) => {
-    res.render("index");
+app.get("/", (req, res) => {
+    res.render("landing");
 })
 app.get("/forgotpass", (req, res) => {
     res.render("forgotpass");
@@ -52,9 +52,9 @@ app.get("/index", protectRoute, (req, res) => {
 app.get('/publish', protectRoute, (req, res) => {
     res.render('publish');
 });
-// app.get('/login', (req, res) => {
-//     res.render('login');
-// });
+app.get('/login', (req, res) => {
+    res.render('login');
+});
 app.get('/signup', (req, res) => {
     res.render('signup');
 });
@@ -73,7 +73,7 @@ app.get('/rideDetails', (req, res) => {
 
 app.get('/logout', (req, res) => {
     res.cookie('login', " ", { maxAge: 1 });
-    res.render('login');
+    res.render('landing');
 });
 
 app.post('/forgotpass', async (req, res) => {

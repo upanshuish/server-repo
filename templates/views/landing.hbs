@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seatz - Carpooling Made Easy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* CSS */
+        #nb {
+            animation: pulse 1.5s ease-in-out infinite;
+            margin-left: 20px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+        .navbar {
+            background-color: black;
+        }
+
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .banner {
+            background-image: url(https://images.unsplash.com/photo-1482029255085-35a4a48b7084?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80);
+            background-size: cover;
+            background-position: center center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(30, 28, 28);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .banner h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 90%;
+            font-weight: 500;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CSS */
+        .navbar-brand:hover {
+            animation: bounce 0.5s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+
+  
+
+
+
+        .btn-primary {
+            font-size: 1.5rem;
+            padding: 1rem 2.5rem;
+            margin-top: 2rem;
+            animation: fadeInUp 1.5s ease-out 0.5s;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .footer {
+            background-color: black;
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        #contact,
+        #follow {
+            margin-left: 40px;
+            font-size: 25px;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #ftsign {
+            margin-left: 40px;
+            font-size: 35px;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        .footer ul li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer ul li a {
+            color: #fff;
+        }
+
+        .footer ul li a:hover {
+            color: #ccc;
+        }
+
+        .footer p {
+            margin-top: 2rem;
+        }
+
+        #cpr {
+            text-align: center;
+        }
+
+        #search {
+            background-color: black;
+            border-color: black;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #lastclass {
+            margin-top: auto;
+            margin-left: 16px;
+        }
+
+        .banner2 {
+            background-size: cover;
+            background-position: center center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .banner2 h1 {
+            margin-top: 50px;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 90%;
+        }
+
+        #publish {
+            background-color: black;
+            border-color: black;
+            font-weight: 600;
+            font-size: 15px;
+
+        }
+        #famcont:hover{
+            animation: slideIn 1.5s ease-out;
+
+        }
+
+        #famcont {
+            text-align: center;
+            background-color: white;
+            border: 1px solid #000;
+            padding: 20px;
+            animation: pulse 1.5s ease-in-out 3s;
+        }
+
+        #famcont h2 {
+            color: black;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #famcont .black-button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #famcont .black-button:hover {
+            background-color: grey;
+            color: #fcfafa;
+            border: 4px solid grey;
+        }
+
+        #nbl {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a id="nbl" class="navbar-brand" href="#">Seatz</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="banner">
+            <h1>SHARE THE RIDE, SHARE THE SAVINGS</h1>
+            <button id="search" class="btn btn-primary" onclick="window.location.href='/index'">SEARCH A RIDE</button>
+        </div>
+    </div>
+
+    <div id="famcont" class="famcontainer">
+        <h2>Popular Rides</h2>
+        <div class="button-container">
+            <button class="black-button">Delhi  →  Chandigarh</button>
+            <button class="black-button">Chandigarh  →  Delhi</button>
+            <button class="black-button">Chandigarh  →  Ambala</button>
+            <button class="black-button">Chandigarh  →  Manali</button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="banner2"
+            style="background-image: url(https://images.unsplash.com/photo-1582038715054-adba011b2da2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);">
+            <h1>OFFER A RIDE AND START EARNING</h1>
+            <button id="publish" class="btn btn-primary" onclick="window.location.href='/index'">PUBLISH A RIDE</button>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h3 id="contact">Contact</h3>
+                    <ul>
+                        <li><a href="#">Email: rideseatz@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h3 id="follow">Follow us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div id="lastclass" class="class">
+                    <h2 id="ftsign">Seatz</h2>
+                    <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p id="cpr">&copy; 2023 Seatz. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
